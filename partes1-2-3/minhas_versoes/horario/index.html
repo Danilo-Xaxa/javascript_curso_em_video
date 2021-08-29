@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horário</title>
+    <style>
+        body {
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hora do dia</h1>
+    <p id="bom"></p>
+    <img id="imagem" src="snobrod.jpg" alt="Snobrod">
+    <script>
+        let agora = new Date()
+        let hora = agora.getHours()
+        let minuto = agora.getMinutes()
+
+        let p_bom = window.document.querySelector('p#bom')
+        let img1 = window.document.querySelector('img#imagem')
+        p_bom.innerText = `Agora são ${hora}:${minuto}`
+    
+        if (hora < 12) {
+            document.body.style.background = 'lightblue'
+            img1.src = 'imagens/dia.jpg'
+            p_bom.innerHTML += '<br>Bom dia'
+        } else if (hora < 18) {
+            document.body.style.background = 'orange'
+            img1.src = 'imagens/tarde.jpg'
+            p_bom.innerHTML += '<br>Boa tarde'
+        } else if (hora < 24) {
+            document.body.style.background = 'grey'
+            img1.src = 'imagens/noite.jpg'
+            p_bom.innerHTML += '<br>Boa noite'
+        }
+    </script>
+</body>
+</html>

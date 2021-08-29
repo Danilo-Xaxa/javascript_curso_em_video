@@ -1,0 +1,36 @@
+body {
+    background: rgb(78, 170, 94);
+    font: normal 15pt Arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 600px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.404);
+}
+
+div {
+    word-wrap: break-word;
+    padding: 0pt 15pt;
+}
+
+select#numeros {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 114px;
+}
+
+option {
+    font: normal 10pt Arial;
+}

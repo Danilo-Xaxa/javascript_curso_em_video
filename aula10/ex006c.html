@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 20pt Arial;
+            background: rgb(42, 139, 42);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()">
+        Interaja...
+    </div>
+    <script>
+        // declarando variáveis
+        let cliques = 0
+        let div1 = window.document.getElementById("area")
+
+        // entrar
+        function entrar() {
+            if (cliques == 0) {
+                div1.innerText = 'Agora clique'
+            }
+        }
+
+        /* clicar
+        A cada clique teremos um tom de cinza, ou seja,
+        de rgb(1, 1, 1) a rgb(255, 255, 255) */
+        function clicar() {
+            cliques++
+            div1.innerText = `Clicou ${cliques} vezes`
+            div1.style.background = `rgb(${cliques}, ${cliques}, ${cliques})`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM</title>
+    <style>
+        body {
+            background: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com o DOM</h1>
+    <p>Eae man, suave?</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JS</p>
+    <p id="ole">Ole ole ole ola</p>
+    <div class="msg">Clique em mim</div>
+    <script>
+        // pegando o primeiro <p> e escrevendo o texto dele na tela
+        let p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write(`Aqui vai o texto do meu p1: "${p1.innerText}"`)
+
+        // editando o innerText do segundo <p>
+        window.document.getElementsByTagName('p')[1].innerText = 'EDITEI AQUI KK'
+
+        // mudando a cor do primeiro <p>
+        p1.style.color = '#e39c4b'
+
+        // mudando a cor do background do body
+        let corpo = window.document.body
+        corpo.style.background = '#323402'
+
+        // printando a cor do primeiro <p>
+        let cor_p1 = p1.style.color
+        window.document.write(`<br>Esse é o rgb do p1: ${cor_p1}`)
+
+        // alterando o terceiro <p>, dessa vez por id
+        let p3 = window.document.getElementById('ole')
+        p3.style.color = '#4f29ed'
+        p3.innerText = 'OLEEEEEEEEEEEEEEEEEEEEEEEE'
+
+        // usando por seletor
+        let a = window.document.querySelector('div.msg')
+        a.innerText = 'Não clique aqui'
+    </script>
+</body>
+</html>

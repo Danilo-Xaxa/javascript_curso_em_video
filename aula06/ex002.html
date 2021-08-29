@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 6</title>
+    <style>
+        body {
+            background-color: rgb(105, 105, 173);
+        }
+
+        h1 {
+            font: normal 30pt Arial;
+            color: rgb(255, 212, 22);
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let down = window.prompt('Let down and...')
+        window.alert('Let down and ' + down + ' :(')
+
+        var n1 = prompt('Digite um número: ')
+        var n2 = prompt('Digite outro número: ')
+        var s = Number(n1) + Number(n2)
+        window.alert(`A soma entre ${n1} e ${n2} é ${s}`)
+
+        let nome = window.prompt('Qual teu nome? ')
+        document.write(`<h1>Olá, ${nome}. Seu nome tem ${nome.length} letras</h1>`)
+    </script>
+</body>
+</html>

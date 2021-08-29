@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Valores</title>
+    <style>
+        body {
+            background-color: rgb(105, 105, 173);
+            color: white;
+            font: normal 15pt Arial;
+        }
+
+        p {
+            color: rgb(255, 212, 22);
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando alguns valores</h1>
+    <input type="number" name="caixa1" id="caixa1">
+    +
+    <input type="number" name="caixa2" id="caixa2">
+    <input type="button" value="Somar" onclick="somar()">
+    <p id="p1"></p>
+    <script>
+        function somar() {
+            let n1 = Number(document.getElementById("caixa1").value)
+            let n2 = Number(document.querySelector("input#caixa2").value)
+            let s = n1 + n2
+            let res = document.querySelector("p#p1")
+            res.innerHTML = `O resultado da soma é <strong>${s}</strong>`
+        }
+    </script>
+</body>
+</html>
